@@ -1,6 +1,33 @@
 # What's new in LGA Media Tools
 
-## v0.613 (2026-10-04)
+## v0.627
+
+- **Fixed:** Transcode no longer flashes a terminal window that stole the focus when a job started, which happened on the first transcode after installing. (Windows only)
+
+## v0.625
+
+- **Improved:** The installer is less than a third of the size (about 140 MB instead of 436 MB), so updates download faster, and Media Tools takes about 1.3 GB less disk space. (Windows only)
+
+## v0.624
+
+- **New:** Rename groups files by folder and numbering starts again in each folder (or continues, if you prefer), from the number you choose.
+- **New:** Rename can order files by name, date taken or date modified, or by hand: drag rows or use Alt+Up/Down to set the numbering order.
+
+## v0.623
+
+- **Fixed:** Rename no longer hides files when a folder has two groups with the same name and different extensions, like an iPhone export with IMG_0737.JPEG and IMG_0737.MOV.
+
+## v0.621
+
+- **New:** Transcode now opens iPhone HEIC/HEIF photos and converts them to JPG with the new JPG photo output, keeping the date, camera, GPS location, color profile and orientation.
+
+## v0.620
+
+- **New:** Rename's Search & Replace understands wildcards: search `*` and replace with `name_###` to rename every checked file as name_001, name_002… in table order, or use `ref_*` to keep the original name with something added. The file extension is never touched, and you are warned before a counter would replace the frame numbers of an image sequence.
+- **Improved:** Rename sorts files naturally (photo 2 before photo 10) and ignores the hidden `._` files that macOS leaves next to your media.
+- **Fixed:** Renaming files whose new names were taken by other files in the same batch (for example swapping two names) no longer fails halfway.
+
+## v0.613
 
 - **New:** In Rename you can add more Search & Replace rows with the + button (up to 8) to rename everything in one go; presets are disabled while there are more than two rows.
 
