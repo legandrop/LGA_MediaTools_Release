@@ -1,5 +1,9 @@
 # What's new in LGA Media Tools
 
+## v0.629 (2026-10-09)
+
+- **Fixed:** Closing Media Tools now also stops its background transcode processes, which kept up to 2 GB of graphics card memory busy for 10 to 30 minutes after the app was closed. (Windows only)
+
 ## v0.627
 
 - **Fixed:** Transcode no longer flashes a terminal window that stole the focus when a job started, which happened on the first transcode after installing. (Windows only)
