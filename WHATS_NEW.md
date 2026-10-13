@@ -1,6 +1,10 @@
 # What's new in LGA Media Tools
 
-## v0.629 (2026-10-09)
+## v0.630 (2026-10-13)
+
+- **New:** Rename lists the dropped folder and its subfolders, including empty folders, and lets you rename them; use Folders to toggle their selection.
+
+## v0.629
 
 - **Fixed:** Closing Media Tools now also stops its background transcode processes, which kept up to 2 GB of graphics card memory busy for 10 to 30 minutes after the app was closed. (Windows only)
 
