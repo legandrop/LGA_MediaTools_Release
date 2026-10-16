@@ -1,6 +1,11 @@
 # What's new in LGA Media Tools
 
-## v0.630 (2026-10-13)
+## v1.000 (2026-10-15)
+
+- **Improved:** Rename shows a yellow folder icon beside each folder name, making folders easy to distinguish from files and sequences.
+- **Fixed:** The file lists in Rename, Transcode and Transcode Queue now show their scrollbar, and Transcode no longer shows a horizontal scrollbar when all columns fit.
+
+## v0.630
 
 - **New:** Rename lists the dropped folder and its subfolders, including empty folders, and lets you rename them; use Folders to toggle their selection.
 
