@@ -1,6 +1,31 @@
 # What's new in LGA Media Tools
 
-## v1.000 (2026-10-15)
+## v1.001 (2026-11-02)
+
+- **New:** El lápiz de la fila `----` del dropdown `Transcode Preset` abre una ventana con todos tus presets y qué hace cada uno, donde podés renombrarlos y cambiarles el orden.
+- **New:** Si cerrás Media Tools con transcodes en curso, te pregunta si querés abortarlos; al confirmar, la app restaura los originales y borra la salida a medias antes de cerrarse.
+- **New:** Transcode acepta clips Sony X-OCN de la VENICE (MXF) y los convierte a cualquier formato de salida.
+- **Improved:** Cuando Transcode no puede arrancar su motor de conversión (por ejemplo, porque un antivirus o la seguridad de la empresa lo bloquea), la fila explica qué pasó y ya no quedan procesos colgados en segundo plano.
+- **Improved:** Cuando un transcode falla porque el proceso se cortó, la fila muestra el motivo real en vez de "illegal value".
+- **Improved:** Transcode de secuencias EXR a EXR (DWAA, ZIP y PIZ) va más rápido en la Mac, sobre todo en colas de varios jobs. (macOS only)
+- **Improved:** Transcode a PNG, TIFF y DPX arranca más rápido en la Mac en colas de varios jobs. (macOS only)
+- **Improved:** Exportar secuencias PNG en la Mac es varias veces mas rapido, con archivos del mismo tamano o mas chicos. (macOS only)
+- **Improved:** Transcode de secuencias EXR a ProRes 422 va mucho más rápido en la Mac, sobre todo en colas de varios jobs. (macOS only)
+- **Improved:** Transcode avisa cuando Delete Originals no puede borrar un original (por ejemplo, porque otro programa lo tiene abierto): la conversión queda hecha, el original sigue en la carpeta Originals y la fila lo marca con ⚠.
+- **Improved:** Clicking the Original column header in Rename sorts by name with standalone folders on top and each sequence right below its folder; click again to reverse the order.
+- **Fixed:** La cola de Transcode y el arranque de la app ya no se congelan cuando hay secuencias grandes, un disco externo desconectado o una carpeta de red caída.
+- **Fixed:** La carpeta temporal por defecto que muestra Settings es la que de verdad usa el transcode. (macOS only)
+- **Fixed:** Transcode a H.264 y H.265 con `Use GPU` ya funciona en la Mac con el encoder por hardware de Apple; si el hardware no acepta el tamaño del cuadro, convierte por CPU en vez de fallar. (macOS only)
+- **Fixed:** Transcode ya convierte videos a DPX en la Mac: antes fallaba apenas arrancaba. (macOS only)
+- **Fixed:** Transcode de EXR a EXR con conversión de color o cambio de tamaño ya funciona en la Mac: antes fallaba apenas arrancaba. (macOS only)
+- **Fixed:** Transcode ya convierte videos a MP4 y MOV en la Mac: antes fallaban apenas arrancaban. (macOS only)
+- **Fixed:** Cuando una conversión de video falla, Transcode Queue muestra el motivo en vez de decir que la abortaste.
+- **Fixed:** Transcode en Same folder/Originals con Delete Originals ahora sí borra el video original al convertirlo a EXR o TIFF, en vez de dejarlo en la carpeta Originals. (Windows only)
+- **Fixed:** Transcode en Same folder/Originals ya no borra el original que ya estaba en la carpeta Originals al volver a convertir un clip o una foto: el nuevo se guarda al lado como _2, _3...
+- **Fixed:** Transcode ya no reemplaza un video o una carpeta de frames que ya existe en el destino: la conversión nueva sale con _2, _3..., y Transcode Queue muestra ese nombre.
+- **Fixed:** Rename's Fix Files and Fix folder now show their progress right away, and the list stays where it was afterwards instead of jumping back to the top, so you can keep fixing the other mismatches below.
+
+## v1.000
 
 - **Improved:** Rename shows a yellow folder icon beside each folder name, making folders easy to distinguish from files and sequences.
 - **Fixed:** The file lists in Rename, Transcode and Transcode Queue now show their scrollbar, and Transcode no longer shows a horizontal scrollbar when all columns fit.
