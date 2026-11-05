@@ -1,7 +1,33 @@
 # What's new in LGA Media Tools
 
-## v1.001 (2026-11-02)
+## v1.002 (2026-11-05)
 
+- **Improved:** Para ver un archivo en el Explorer o en el Finder ahora se usa el clic derecho en las tablas, en vez de Alt+Click; en Transcode y en `TRANSCODE QUEUE`, si la salida quedó en otra carpeta, el menú ofrece ver el original o lo transcodeado.
+- **Improved:** H.264 y H.265 salen siempre por el encoder de hardware de la Mac, mucho más rápido, y la opción `Use GPU` ya no aparece porque no hace falta. (macOS only)
+- **Improved:** Convertir videos ProRes 4444 es más rápido en las Mac con motores de ProRes (M1 Pro, M1 Max y posteriores). (macOS only)
+- **Improved:** Convertir secuencias de imagen a ProRes 4444 es mucho más rápido y sale con mejor calidad. (macOS only)
+- **Improved:** Convertir secuencias PNG de 16 bits a ProRes es más rápido. (macOS only)
+- **Improved:** Convertir secuencias de imagen a H.264 o H.265 con `Use GPU` y conversión de color o resize es mucho más rápido. (macOS only)
+- **Improved:** El H.264 con `Use GPU` sale con mejor calidad, sin cuadros sueltos más borrosos. (macOS only)
+- **Improved:** Si la conexión falla al buscar o bajar una actualización, Media Tools espera y vuelve a probar solo hasta tres veces.
+- **Improved:** Los clips Sony X-OCN se convierten mucho más rápido a video, DPX, PNG y TIFF. (macOS only)
+- **Improved:** Convertir a ProRes 422 y 4444 en resoluciones grandes (6K) es mucho más rápido y ya no llena la memoria de la Mac. (macOS only)
+- **Improved:** Los clips Sony X-OCN se decodifican más rápido en cualquier conversión.
+- **Improved:** Convertir a MXF DNxHR HQ, SQ y LB es mucho más rápido. (macOS only)
+- **Improved:** Convertir secuencias TIFF es más rápido. (macOS only)
+- **Improved:** Los clips Sony X-OCN entran a la cola leyendo solo el principio y el final del archivo, en vez de recorrerlo entero.
+- **Fixed:** Las tablas llenan siempre el ancho de la ventana: achicar la columna `Media Name` de Transcode ya no deja un hueco a la derecha, y las columnas no saltan al maximizar o cambiar el tamaño de la ventana.
+- **Fixed:** Convertir secuencias de imagen a H.264 o H.265 con GPU vuelve a dar el color correcto: en la versión anterior el video salía rosa. (Windows only)
+- **Fixed:** Las secuencias DPX, TIFF y PNG vuelven a convertirse a MOV, MP4 y MXF. (macOS only)
+- **Fixed:** Los clips Sony X-OCN sin resize vuelven a convertirse a PNG y a TIFF de 8 bits.
+- **Fixed:** Las secuencias TIFF y los videos sin resize vuelven a convertirse a PNG. (macOS only)
+- **Fixed:** ProRes 4444 de cuadros muy grandes (6K o más) ya no falla al convertir. (macOS only)
+- **Fixed:** Abrir un dropdown de presets ya no renombra ni borra un preset por soltar el click encima del lápiz o del tacho.
+- **Fixed:** Los `Transcode Preset` que convierten a AP0 quedan elegidos en vez de volver a `----` apenas los seleccionás.
+
+## v1.001
+
+- **New:** Cuando una secuencia EXR o DPX no tiene frame rate, `Write to files` lo graba en sus archivos sin tocar la imagen, así queda guardado para Media Tools, Nuke y cualquier otro programa.
 - **New:** El lápiz de la fila `----` del dropdown `Transcode Preset` abre una ventana con todos tus presets y qué hace cada uno, donde podés renombrarlos y cambiarles el orden.
 - **New:** Si cerrás Media Tools con transcodes en curso, te pregunta si querés abortarlos; al confirmar, la app restaura los originales y borra la salida a medias antes de cerrarse.
 - **New:** Transcode acepta clips Sony X-OCN de la VENICE (MXF) y los convierte a cualquier formato de salida.
@@ -13,6 +39,7 @@
 - **Improved:** Transcode de secuencias EXR a ProRes 422 va mucho más rápido en la Mac, sobre todo en colas de varios jobs. (macOS only)
 - **Improved:** Transcode avisa cuando Delete Originals no puede borrar un original (por ejemplo, porque otro programa lo tiene abierto): la conversión queda hecha, el original sigue en la carpeta Originals y la fila lo marca con ⚠.
 - **Improved:** Clicking the Original column header in Rename sorts by name with standalone folders on top and each sequence right below its folder; click again to reverse the order.
+- **Fixed:** Transcode reconoce el frame rate que traen los DPX en su header, en vez de marcarlos como `No FPS`.
 - **Fixed:** La cola de Transcode y el arranque de la app ya no se congelan cuando hay secuencias grandes, un disco externo desconectado o una carpeta de red caída.
 - **Fixed:** La carpeta temporal por defecto que muestra Settings es la que de verdad usa el transcode. (macOS only)
 - **Fixed:** Transcode a H.264 y H.265 con `Use GPU` ya funciona en la Mac con el encoder por hardware de Apple; si el hardware no acepta el tamaño del cuadro, convierte por CPU en vez de fallar. (macOS only)
