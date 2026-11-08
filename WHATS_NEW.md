@@ -1,6 +1,15 @@
 # What's new in LGA Media Tools
 
-## v1.002 (2026-11-05)
+## v1.003 (2026-11-08)
+
+- **Improved:** En Rename, al pasar el mouse por un `Mismatch folder/seq`, los botones `Fix Files` y `Fix folder` ya no tapan todo el estado: si agrandás la columna `Status` se lee entero. Cuando el estado no entra termina en `…`, y lo que se achica primero es `Pending`, no el mismatch.
+- **Improved:** En Rename, lo que no cambia ya no repite el nombre entero: `Renamed` dice `Same as original` y la carpeta que se llama igual que su secuencia dice `Same as sequence`, así los nombres largos se leen completos; las columnas `Folder Original` y `Folder Renamed` aparecen solo mientras hay alguna secuencia para arreglar con `Fix Files` o `Fix folder`.
+- **Improved:** Los encabezados de todas las tablas tienen un fondo gris un poco más claro, para que se distingan mejor de las filas.
+- **Improved:** En las tablas de Rename, Transcode, `TRANSCODE QUEUE` y `NTFX PULL`, arrastrar el borde entre dos columnas cambia solo esas dos y deja las demás como estaban; `Status` también se puede ensanchar desde su borde izquierdo, y un doble clic en cualquier borde vuelve al reparto automático.
+- **Improved:** Rename muestra las carpetas como en el Explorador: cada carpeta con su contenido abajo, sangrado y unido por una línea punteada; una carpeta que solo tiene una secuencia se muestra como una sola fila.
+- **Fixed:** Las secuencias que son solo números de cuadro (`000000.exr`, como las que saca Topaz) se reconocen como una secuencia en Rename y en Transcode, en vez de un archivo suelto por cuadro; en Rename aparecen como `No name` y con `Fix Files` toman el nombre de su carpeta, y al transcodearlas la salida también lleva el nombre de la carpeta.
+
+## v1.002
 
 - **Improved:** Para ver un archivo en el Explorer o en el Finder ahora se usa el clic derecho en las tablas, en vez de Alt+Click; en Transcode y en `TRANSCODE QUEUE`, si la salida quedó en otra carpeta, el menú ofrece ver el original o lo transcodeado.
 - **Improved:** H.264 y H.265 salen siempre por el encoder de hardware de la Mac, mucho más rápido, y la opción `Use GPU` ya no aparece porque no hace falta. (macOS only)
